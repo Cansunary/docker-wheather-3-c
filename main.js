@@ -34,7 +34,10 @@ function renderWeather(weather) {
 
   const weatherClass = windspeed > 20 ? 'weather-wind' : 'weather-sunny';
 
-  weatherCard.className = `card ${weatherClass}`;
+  // ❗ card class'ını BOZMADAN sadece weather durumunu değiştir
+  weatherCard.classList.remove('weather-sunny', 'weather-rain', 'weather-wind');
+  weatherCard.classList.add(weatherClass);
+
   weatherCard.innerHTML = `
     <h3>☀️ Hava Durumu</h3>
     <p>Sıcaklık: ${temperature}°C</p>
@@ -44,6 +47,7 @@ function renderWeather(weather) {
 
 function renderTime(time) {
   const timeCard = document.getElementById('time-card');
+  timeCard.classList.add('card');
 
   timeCard.innerHTML = `
     <h3>🕒 Yerel Saat</h3>
@@ -54,6 +58,8 @@ function renderTime(time) {
 
 function renderCountry(country) {
   const countryCard = document.getElementById('country-card');
+  countryCard.classList.add('card');
+
   const currency = Object.keys(country.currencies)[0];
 
   countryCard.innerHTML = `
