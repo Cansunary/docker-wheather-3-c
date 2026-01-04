@@ -39,7 +39,8 @@ body {
 
 /* ------------------ CARD ------------------ */
 .card {
-  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 18px;
   padding: 24px;
   width: 260px;
@@ -63,16 +64,28 @@ body {
   font-size: 0.95rem;
 }
 
-/* ------------------ WEATHER STATES ------------------ */
-.weather-sunny {
+/* ------------------ WEATHER INDICATOR (FIXED) ------------------ */
+.card.weather-sunny::before,
+.card.weather-rain::before,
+.card.weather-wind::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 18px 18px 0 0;
+}
+
+.card.weather-sunny::before {
   background: linear-gradient(135deg, #ffe066, #ffd43b);
 }
 
-.weather-rain {
+.card.weather-rain::before {
   background: linear-gradient(135deg, #74c0fc, #4dabf7);
 }
 
-.weather-wind {
+.card.weather-wind::before {
   background: linear-gradient(135deg, #dee2e6, #ced4da);
 }
 
