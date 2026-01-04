@@ -1,4 +1,4 @@
-import { getWeather } from './services/weather.js';
+import { getWeather } from './services/wheather.js';
 import { getTime } from './services/time.js';
 import { getCountry } from './services/country.js';
 
