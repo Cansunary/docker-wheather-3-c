@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <title>City Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+  <title>City Dashboard | Şehir Bilgi Paneli</title>
+  <meta name="description" content="Şehirler için hava durumu, yerel saat ve ülke bilgilerini gösteren modern dashboard uygulaması." />
+  <meta name="author" content="Cansu Çorbacı" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Font (opsiyonel ama çok yakışır) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
+
 <body>
+  <header class="header">
+    <h1>🌍 Şehir Bilgi Paneli</h1>
+    <p class="subtitle">Hava durumu, yerel saat ve ülke bilgileri tek ekranda</p>
+  </header>
 
-    <!-- HEADER -->
-    <header class="header">
-        <h1 class="title">🌍 Şehir Bilgi Paneli</h1>
-        <p class="subtitle">
-            Hava durumu, saat bilgisi ve ülke detaylarını tek ekranda görüntüle
-        </p>
-    </header>
+  <main>
+    <section class="dashboard" aria-label="Şehir bilgileri">
+      <article class="card" id="weather-card" aria-live="polite"></article>
+      <article class="card" id="time-card" aria-live="polite"></article>
+      <article class="card" id="country-card" aria-live="polite"></article>
+    </section>
+  </main>
 
-    <!-- MAIN DASHBOARD -->
-    <main class="dashboard">
+  <footer class="footer">
+    <p>© 2026 City Dashboard</p>
+  </footer>
 
-        <!-- WEATHER -->
-        <section class="card weather-card" id="weather-card" aria-live="polite">
-            <!-- JS ile doldurulacak -->
-        </section>
-
-        <!-- TIME -->
-        <section class="card time-card" id="time-card" aria-live="polite">
-            <!-- JS ile doldurulacak -->
-        </section>
-
-        <!-- COUNTRY -->
-        <section class="card country-card" id="country-card" aria-live="polite">
-            <!-- JS ile doldurulacak -->
-        </section>
-
-    </main>
-
-    <!-- JS -->
-    <script type="module" src="main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
