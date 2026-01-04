@@ -34,7 +34,7 @@ function renderWeather(weather) {
 
   const weatherClass = windspeed > 20 ? 'weather-wind' : 'weather-sunny';
 
-  weatherCard.className = weatherClass;
+  weatherCard.className = `card ${weatherClass}`;
   weatherCard.innerHTML = `
     <h3>☀️ Hava Durumu</h3>
     <p>Sıcaklık: ${temperature}°C</p>
